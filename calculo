@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+
+function alterarParagrafo(){
+
+
+var v1 = document.Formulario.valor1.value;
+var v2 = document.Formulario.valor2.value;
+var resultado = Math.sqrt(v1*v2*22.5);
+
+document.getElementById("show").innerHTML = resultado; 
+
+}
+
+function limpar(){
+var borracha = "";
+var v1 ="";
+var v2="";
+document.getElementById("show").innerHTML = borracha;
+}
+</script>
+</head>
+<body>
+<form name="Form" id="Formulario" >
+	
+	VPA
+  <input type="text" id="valor1" name="valor1" />
+  <br>
+  <br>
+  LPA
+  <input type="text" id="valor2" name="valor2" />
+  <br>
+  <br>
+  <br>
+
+<button type="button" onclick= "alterarParagrafo();">Calcular</button>  
+<button type="button" onclick= "limpar();">Limpar</button>
+<br>
+<br>
+<hr>
+<div id="show"> </div>
+</form>
+</body>
+</html>
